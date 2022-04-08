@@ -70,11 +70,18 @@ public class Dataloader implements CommandLineRunner {
             roles.add(admin2);
             roles.add(user);
 
+            Set<Role> rol=new HashSet<>();
+            rol.add(admin2);
+            rol.add(user);
+
+            Set<Role> rollll=new HashSet<>();
+            rollll.add(user);
+
             User user1 = new User("Bexruz Izzatullayev", roles, "Bekhruz", "0000",true);
             userRepository.save(user1);
-            User user2=new User("Jafarbek To'rayev",roles,"Jafar","1111",true);
+            User user2=new User("Jafarbek To'rayev",rol,"Jafar","1111",true);
             userRepository.save(user2);
-            User user3=new User("Jamshid",roles,"Jamik","2222",true);
+            User user3=new User("Jamshid",rollll,"Jamik","2222",true);
             userRepository.save(user3);
         }
     }
